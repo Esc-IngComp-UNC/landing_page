@@ -88,6 +88,7 @@ function FormLab() {
                     {console.log(formData)}
                     <motion.button type="submit" whileHover={{scale:1.2}} transition={{duration:0.1}}>Enviar</motion.button>
                     </motion.form>
+                    <div className="gradienteBottomForm"></div>
                             </motion.div>
                             )
 }

@@ -374,6 +374,7 @@ form input:not(textarea) {
   height: 2.25rem;
 }
 
+
 .mapa{
   width: 100vw;
   display: flex;
@@ -408,6 +409,8 @@ form input:not(textarea) {
   flex-direction: column;
   gap: 1rem;
 }
+
+
 
 @media only screen and (max-width: 600px) {
 html{
@@ -552,5 +555,46 @@ nav{
   right: 0;
   
 }
+.faqContainer{
+  height: fit-content;
+}
 
+#question1{
+  margin-top: 10vh;
+}
+
+.question{
+  width: 98vw;
+}
+.nameNsurname{
+  flex-direction: column;
+}
+textarea{
+  width: 80vw;
+  height: 10vh;
+}
+form h1{
+  width: 80vw;
+  text-align: center;
+}
+.questionOptionsBlock{
+  text-align: start;
+}
+.formContainer{
+  flex-direction: column;
+  gap: 0;
+}
+.contactContainer{
+  margin-top: -5px;
+}
+.gradienteBottomForm{
+  margin-top: -5px;
+  width: 100vw;
+  height: 10vh;
+  background: rgb(254,254,254);
+background: -moz-linear-gradient(180deg, rgba(254,254,254,1) 24%, rgba(0,59,70,1) 66%);
+background: -webkit-linear-gradient(180deg, rgba(254,254,254,1) 24%, rgba(0,59,70,1) 66%);
+background: linear-gradient(180deg, rgba(254,254,254,1) 24%, rgba(0,59,70,1) 66%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefefe",endColorstr="#003b46",GradientType=1);
+}
 }
