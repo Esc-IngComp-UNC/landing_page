@@ -34,4 +34,4 @@ function CarouselImages() {
     </div>
   )
 }
-export default CarouselImages
+export default CarouselImages;

@@ -92,4 +92,4 @@ function FormLab() {
                             )
 }
 
-                            export default FormLab
+                            export default FormLab;

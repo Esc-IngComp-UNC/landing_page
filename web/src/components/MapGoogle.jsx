@@ -9,4 +9,4 @@ function MapGoogle(){
     </div>)
 }
 
-export default MapGoogle
+export default MapGoogle;
