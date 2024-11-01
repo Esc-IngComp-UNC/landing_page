@@ -586,6 +586,14 @@ form h1{
 }
 .contactContainer{
   margin-top: -5px;
+  height: fit-content;
+  flex-direction: column;
+  gap: 0;
+
+}
+.infoL, .infoR {
+  margin: 0;
+  padding: 1rem;
 }
 .gradienteBottomForm{
   margin-top: -5px;
@@ -599,6 +607,12 @@ form h1{
 }
 }
 
+
+
 .socialMedia{
   display: flex;
+  
+}
+.contactContainer a{
+all: unset;
 }
