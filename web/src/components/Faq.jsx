@@ -2,12 +2,15 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 function Faq() {
-
+    const isMobile = window.innerWidth < 768;
     const [isOpen, setIsOpen] = useState({ question1: false, question2: false, question3: false, question4: false })
     const questionVariants = {
         closed: {
             maxHeight: "4rem",
             overflowY: "hidden"
+        },
+        closedMobile: {
+            maxHeight: "fit-content",
         },
         open: {
             maxHeight: "15rem",
@@ -25,7 +28,7 @@ function Faq() {
     return (
         <motion.div className="faqContainer" initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
             <h1>PREGUNTAS FRECUENTES</h1>
-            <motion.div className='question' variants={questionVariants} animate={isOpen.question1 ? "open" : "closed"} initial="closed" onClick={() => setIsOpen({ ...isOpen, question1: !isOpen['question1'] })} transition={{ duration: 0.5 }}>
+            <motion.div className='question' variants={questionVariants} animate={ isOpen.question1 ? "open" : "closed" } id='question1' initial="closed" onClick={() => setIsOpen({ ...isOpen, question1: !isOpen['question1'] })} transition={{ duration: 0.5 }}>
                     <h3>¿Dónde se encuentra el Laboratorio de Computación?</h3> 
                     <motion.div className='faqArrow'
                         variants={{
