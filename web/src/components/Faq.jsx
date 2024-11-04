@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 function Faq() {
-    const isMobile = window.innerWidth < 768;
     const [isOpen, setIsOpen] = useState({ question1: false, question2: false, question3: false, question4: false })
     const questionVariants = {
         closed: {

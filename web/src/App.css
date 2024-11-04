@@ -410,6 +410,22 @@ form input:not(textarea) {
   gap: 1rem;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.socialMedia{
+  display: flex;
+  
+}
+.contactContainer a{
+all: unset;
+}
+
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -429,9 +445,11 @@ body{
 nav{
   align-items: center;
   margin: 0;
-  justify-content: flex-start;
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
+.logo{margin-left: 0;}
 .secciones{
   justify-content: flex-start;
   align-items: center;
@@ -605,14 +623,21 @@ form h1{
   background: linear-gradient(180deg, rgba(254,254,254,1) 24%, rgba(0,59,70,1) 66%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefefe",endColorstr="#003b46",GradientType=1);
 }
+.secciones {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
 }
 
-
-
-.socialMedia{
-  display: flex;
-  
+.menu-icon {
+  display: block;
 }
-.contactContainer a{
-all: unset;
+
 }
+
+form p {
+  font-size: small;
+  max-width: 20rem;
+
+}
+
