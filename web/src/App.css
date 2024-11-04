@@ -451,11 +451,17 @@ nav{
 }
 .logo{margin-left: 0;}
 .secciones{
+  position: absolute;
+  top: 9%;
+  right: 0;
   justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   margin: 0;
-  max-width: 100vw;
+  width: 70vw;
   overflow-x:hidden;
+  background-color: #f1f1f1;
+  z-index: 3;
 
 }
 
@@ -623,11 +629,7 @@ form h1{
   background: linear-gradient(180deg, rgba(254,254,254,1) 24%, rgba(0,59,70,1) 66%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefefe",endColorstr="#003b46",GradientType=1);
 }
-.secciones {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-}
+
 
 .menu-icon {
   display: block;

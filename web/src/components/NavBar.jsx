@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react';
+import { Link } from "react-scroll"
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
   const isMobile = window.innerWidth < 800;
@@ -12,12 +13,17 @@ function NavBar() {
       <div className="menu-icon" onClick={toggleMenu}>
         ☰ 
       </div>
-      <motion.div className="secciones" initial={isMobile ? {height:0}: {}} >
-        <div className="seccionlink">Novedades</div>
-        <div className="seccionlink">Preguntas Frecuentes</div>
-        <div className="seccionlink">Sobre Nosotros</div>
-        <div className="seccionlink">Contactos</div>
-      </motion.div>
+      {isMobile ? (<motion.div className="secciones" animate={(isOpen && isMobile) ? {height:"13rem",width:'100vw',opacity:1} : {opacity:0,height:"0rem",width:"0rem"}} transition={{duration:.4}}>
+        <Link to='novedades' smooth={true} className="seccionlink">Novedades</Link>
+        <Link to='faq' smooth={true} className="seccionlink">Preguntas Frecuentes</Link>
+        <Link to='aboutUs' smooth={true} className="seccionlink">Sobre Nosotros</Link>
+        <Link to='contacto' smooth={true} className="seccionlink">Contactos</Link>
+      </motion.div> ) : (<motion.div className="secciones">
+        <Link to='novedades' smooth={true} className="seccionlink">Novedades</Link>
+        <Link to='faq' smooth={true} className="seccionlink">Preguntas Frecuentes</Link>
+        <Link to='aboutUs' smooth={true} className="seccionlink">Sobre Nosotros</Link>
+        <Link to='contacto' smooth={true} className="seccionlink">Contactos</Link>
+      </motion.div>)}
     </nav>
   )
 }
