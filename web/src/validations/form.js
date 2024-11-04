@@ -28,6 +28,8 @@ export const formSchema = z.object({
     }),
   telefono: z.string().max(15, {
     message: "El numero telefonico no debe contener mas de 15 caracteres",
+  }).min(10,{
+    message:"asegurese de poner el codigo de area"
   }),
   texto: z.string().max(500, {
     message: "El texto no debe tener mas de 500 caracteres",
