@@ -410,11 +410,6 @@ form input:not(textarea) {
   gap: 1rem;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
 
 .socialMedia{
   display: flex;
@@ -428,7 +423,7 @@ all: unset;
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 html{
   max-width: 100vw;
   overflow-x: hidden;
@@ -460,17 +455,52 @@ nav{
   margin: 0;
   width: 70vw;
   overflow-x:hidden;
-  background-color: #f1f1f1;
+  background-color: #f2f3f4;
   z-index: 3;
 
 }
+
 
 .carousel{
   max-height: 20rem;
   max-width: 100vw;
   overflow-x:hidden;
 }
+nav{
+  width: 100vw;
+        margin: 0;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        gap: 1rem;
+}
 
+.menuHaburguesa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secciones{
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  background-color: #f2f3f4;
+  width: 100vw;
+  right:0;
+  top: 80px;
+  z-index: 12;
+}
+.secciones a {
+  width: 80vw;
+  text-align: center;
+}
+.secciones a:active{
+  scale: 1.3;
+}
 
 .carousel__slide {
   max-height: 10rem;
@@ -631,11 +661,15 @@ form h1{
 }
 
 
-.menu-icon {
-  display: block;
+.menu-icon{
+  font-size: 2rem;
+  color: #003B46;
+  cursor: pointer;
+  height: 44px;
+}
 }
 
-}
+
 
 form p {
   font-size: small;
