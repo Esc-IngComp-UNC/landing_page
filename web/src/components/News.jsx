@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react";
+import { useRef,useState,useEffect } from "react";
+import useIsMobile from "@hooks/useIsMobile";
 
 function News() {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = useIsMobile();
     const refNews1 = useRef(null)
     const refNews2 = useRef(null)
     const { scrollYProgress: scrollNew1Yprogress } = useScroll({
@@ -15,7 +16,6 @@ function News() {
     const newsValues = useTransform(scrollNew1Yprogress, [0, 1], [0, 300])
     const news2Values = useTransform(scrollNew2Yprogress, [0, 1], [300, 0])
     let newsVariants = {};
-    
     if (!isMobile){
         newsVariants = {
             appearLeft : {

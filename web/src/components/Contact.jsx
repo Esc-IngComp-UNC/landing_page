@@ -2,16 +2,21 @@ import youtube from '/svgs/youtube.svg'
 import instagram from '/svgs/instagram.svg'
 import linkedin from '/svgs/linkedin.svg'
 import twitter from '/svgs/twitterx.svg'
+import gmail from '/svgs/gmail.svg'
 
 function Contact(){
-    //TODO add SVG to each link
     return (
         <div className="contactContainer">
             <div className="infoL">
             <p>Laboratorio de Computación:</p>
-
-            <p>Correo: lc.fcefyn@gmail.com</p>
-            <p>Instagram: c.fcefyn</p>
+            <div className="socialMedia">
+                <img src={gmail} alt="gmailLogo" id='gmailSvg' />
+            <a href='mailto:lc.fcefyn@gmail.com'>lc.fcefyn@gmail.com</a>
+            </div>
+            <div className="socialMedia">
+                <img src={instagram} alt="InstagramLogo" />
+            <a target='_blank' href='https://www.instagram.com/lc.fcefyn/'>Instagram</a>
+            </div>
             </div>
             <div className="infoR">
             <p>FCEFYN:</p>
