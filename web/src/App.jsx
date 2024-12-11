@@ -1,4 +1,4 @@
-import './App.css'
+import '@styles/App.css'
 import AboutUs from '@components/AboutUs'
 import CarouselImages from '@components/CarouselImages'
 import Faq from '@components/Faq'

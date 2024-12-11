@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { formSchema } from '../validations/form'
+import { formSchema } from '@utils/form'
 import { useState } from 'react'
 
 function FormLab() {
