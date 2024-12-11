@@ -1,5 +1,5 @@
 @font-face { font-family: 'customFont'; 
-  src: url('/fonts/Poppins.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+  src: url('@assets/fonts/Poppins.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 *{
   margin: 0;
   padding: 0;

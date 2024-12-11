@@ -1,8 +1,8 @@
-import youtube from '/svgs/youtube.svg'
-import instagram from '/svgs/instagram.svg'
-import linkedin from '/svgs/linkedin.svg'
-import twitter from '/svgs/twitterx.svg'
-import gmail from '/svgs/gmail.svg'
+import youtube from '@assets/svgs/youtube.svg'
+import instagram from '@assets/svgs/instagram.svg'
+import linkedin from '@assets/svgs/linkedin.svg'
+import twitter from '@assets/svgs/twitterx.svg'
+import gmail from '@assets/svgs/gmail.svg'
 
 function Contact(){
     return (
