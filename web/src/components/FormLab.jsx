@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { formSchema } from '@utils/form'
 import { useState } from 'react'
+import  submitFormData  from '@services/formService.js';
 
 function FormLab() {
     const {register,handleSubmit,resetField,formState:{errors}} = useForm({
@@ -11,12 +12,8 @@ function FormLab() {
     const [errorDatos,setErrorDatos] = useState(false)
     const onSubmit = async (datos) => {
         
-        const response = await fetch("http://localhost:3000/form", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(datos),
-        });
-        if (response.ok) {
+        const result = await submitFormData(datos);
+        if (result.success) {
             setErrorDatos(false)
             resetField('nombre')
             resetField('apellido')
