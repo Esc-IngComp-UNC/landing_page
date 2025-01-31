@@ -1,4 +1,4 @@
-import { nullable, z } from "zod";
+import { z } from "zod";
 
 export const formSchema = z.object({
   nombre: z
@@ -26,11 +26,14 @@ export const formSchema = z.object({
     .refine((val) => val !== null, {
       message: "Por favor selecciona una opción.",
     }),
-  telefono: z.string().max(15, {
-    message: "El numero telefonico no debe contener mas de 15 caracteres",
-  }).min(10,{
-    message:"asegurese de poner el codigo de area"
-  }),
+  telefono: z
+    .string()
+    .max(15, {
+      message: "El numero telefonico no debe contener mas de 15 caracteres",
+    })
+    .min(10, {
+      message: "asegurese de poner el codigo de area",
+    }),
   texto: z.string().max(500, {
     message: "El texto no debe tener mas de 500 caracteres",
   }),
