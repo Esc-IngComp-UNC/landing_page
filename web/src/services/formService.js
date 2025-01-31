@@ -1,6 +1,7 @@
 const submitFormData = async (datos) => {
+    const api_url = import.meta.env.VITE_API_BASE_URL
   try {
-    const response = await fetch("http://localhost:3000/form", {
+    const response = await fetch(api_url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos),
